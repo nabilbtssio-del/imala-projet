@@ -1,0 +1,221 @@
+/* =======================
+   RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* =======================
+   HERO (inclut header)
+======================= */
+.hero {
+    background-image: url("img/Rectangle\ 59.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    position: relative;
+    color: white;
+}
+
+/* Overlay sombre */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* Tout le contenu au-dessus de l’overlay */
+.hero > * {
+    position: relative;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00c896;
+}
+
+/* =======================
+   HERO CONTENT
+======================= */
+.hero-content {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    border: 3px solid #9b5de5;
+    padding: 10px 40px;
+}
+
+/* =======================
+   SECTIONS PLANS
+======================= */
+section {
+    padding: 100px 60px;
+}
+
+/* Plan béton */
+.plan-beton {
+    background-image: url("img/Rectangle\ 60.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.plan-beton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.plan-beton > * {
+    position: relative;
+}
+
+/* Plan architectural */
+.plan-archi {
+    background-image: url("img/Rectangle\ 61.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.plan-archi::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.plan-archi > * {
+    position: relative;
+}
+
+/* Plan 3D */
+.plan-3d {
+    background-image: url("img/Rectangle\ 21.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.plan-3d::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.plan-3d > * {
+    position: relative;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 600px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background: #111;
+    color: #ccc;
+    padding: 60px;
+}
+
+footer nav ul {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+footer nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    color: white;
+}
+
+footer .copyright {
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+}
